@@ -1,0 +1,203 @@
+#view-item html,
+body {
+	height: 100%;
+}
+#view-item body {
+	background: #e6e6e6;
+	font-family: "Source Sans Pro", sans-serif;
+}
+#view-item .container {
+	width: 100%;
+	height: 100%;
+	/* display: flex; */
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+#view-item h1 {
+	font-family: "Alegreya Sans", sans-serif;
+	font-weight: 300;
+	margin-top: 0;
+}
+#view-item .control-group {
+	display: block;
+
+	background: #fff;
+	text-align: left;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	padding: 30px;
+	/* width: 200px; */
+	/* height: 210px; */
+
+	display: flex;
+}
+
+#view-item .control-price,
+/* .control-name, */
+.control-button {
+	display: block;
+}
+
+#view-item .control-name {
+	flex-grow: 1;
+	font-size: 1.5rem;
+}
+
+#view-item #item-addon {
+	flex-grow: 0.75;
+}
+
+#view-item .control-price {
+	text-align: right;
+}
+
+#view-item h2.control-price {
+	font-size: 1.5rem;
+}
+#view-item .control-button {
+	background-color: rgb(210, 72, 7, 0.6);
+	border: none;
+	width: 100px;
+	border-radius: 5px;
+	height: 30px;
+	color: white;
+}
+#view-item .control-button:hover {
+	background-color: rgb(210, 72, 7) !important;
+	transition: all 0.2s;
+}
+#view-item .control {
+	display: block;
+	position: relative;
+	padding-left: 30px;
+	margin-bottom: 15px;
+	cursor: pointer;
+	font-size: 12px;
+}
+#view-item .control input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+#view-item .control__indicator {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background: #e6e6e6;
+	border-radius: 5px;
+}
+#view-item .control--radio .control__indicator {
+	border-radius: 50%;
+}
+#view-item .control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+	background: #ccc;
+}
+#view-item .control input:checked ~ .control__indicator {
+	background: #2aa1c0;
+	transition: all 0.2s;
+}
+#view-item .control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+	background: rgb(210, 72, 7, 0.6);
+}
+#view-item .control input:disabled ~ .control__indicator {
+	background: #e6e6e6;
+	opacity: 0.6;
+	pointer-events: none;
+}
+#view-item .control__indicator:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+#view-item .control input:checked ~ .control__indicator:after {
+	display: block;
+}
+
+#view-item .control--checkbox {
+	font-weight: lighter;
+}
+#view-item .control--checkbox .control__indicator:after {
+	left: 8px;
+	top: 4px;
+	width: 3px;
+	height: 8px;
+	border: solid #fff;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+}
+#view-item .control--checkbox input:disabled ~ .control__indicator:after {
+	border-color: #7b7b7b;
+}
+#view-item .control--radio .control__indicator:after {
+	left: 7px;
+	top: 7px;
+	height: 6px;
+	width: 6px;
+	border-radius: 50%;
+	background: #fff;
+}
+#view-item
+	#view-item
+	.control--radio
+	input:disabled
+	~ .control__indicator:after {
+	background: #7b7b7b;
+}
+#view-item .select {
+	position: relative;
+	/* display: inline-block; */
+	margin-bottom: 15px;
+	width: 100%;
+}
+#view-item .select select {
+	/* display: inline-block; */
+	width: 100%;
+	cursor: pointer;
+	padding: 10px 15px;
+	outline: 0;
+	border: 0;
+	border-radius: 0;
+	background: #e6e6e6;
+	color: #7b7b7b;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+#view-item .select select::-ms-expand {
+	display: none;
+}
+#view-item .select select:hover,
+#view-item .select select:focus {
+	color: #000;
+	background: #ccc;
+}
+#view-item .select select:disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
+#view-item .select__arrow {
+	position: absolute;
+	top: 16px;
+	right: 15px;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+	border-style: solid;
+	border-width: 8px 5px 0 5px;
+	border-color: #7b7b7b transparent transparent transparent;
+}
+#view-item .select select:hover ~ .select__arrow,
+#view-item .select select:focus ~ .select__arrow {
+	border-top-color: #000;
+}
+#view-item .select select:disabled ~ .select__arrow {
+	border-top-color: #ccc;
+}
+
+#view-item h4 {
+	font-size: 1rem;
+}

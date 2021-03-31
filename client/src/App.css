@@ -1,0 +1,97 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+	margin: 0;
+	padding: 0;
+}
+
+.pages {
+	width: 100%;
+	height: 100%;
+	/* height: 1500px; */
+	/* height: auto; */
+	justify-content: center;
+	text-align: center;
+}
+
+.Title {
+	color: rgb(0, 0, 0);
+	margin-bottom: 30px;
+	font-size: 50px;
+	text-shadow: 0 0 1px black;
+}
+
+.container-fluid {
+	padding: 0;
+	margin: 0;
+}
+
+html,
+body,
+#root,
+.App {
+	background-image: linear-gradient(
+		to right,
+		rgb(243, 239, 239) 50% 0%,
+		#ccaf60 100% 100%
+	);
+	width: 100%;
+	height: 100%;
+	font-family: "Roboto";
+	color: #172730;
+	user-select: none;
+}
+
+input {
+	margin: auto;
+	width: 200px;
+	display: block;
+}
+
+input {
+	margin-bottom: 20px;
+}
+
+#register {
+	color: blue !important;
+}
+
+#addPage button {
+	margin-top: 20px;
+	padding: 10px 20px;
+}
+
+#editPage .buttons {
+	justify-content: center;
+	margin-top: 20px;
+	margin-right: 10px;
+	padding: 10px 10px;
+}
+
+#Menu:target {
+	filter: blur(0px) !important;
+}
+
+.navbar:target {
+	filter: blur(0px) !important;
+}

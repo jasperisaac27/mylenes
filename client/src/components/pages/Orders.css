@@ -1,0 +1,241 @@
+#user-orders .card {
+	border: none !important;
+}
+
+#user-orders .user-order {
+	list-style-type: none;
+}
+/* 
+#user-orders {
+	display: flex;
+	align-items: flex-start;
+} */
+
+#user-orders .status-button {
+	background-color: rgb(210, 72, 7, 0.6);
+	border: none;
+	color: white;
+	width: 150px;
+
+	margin-top: 0 !important;
+	border-radius: 0;
+	padding: 0;
+}
+
+#user-orders .status-button:hover {
+	background-color: rgb(210, 72, 7) !important;
+	transition: all 0.2s;
+}
+
+#user-orders .status-button:nth-of-type(1) {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+#user-orders .status-button:last-of-type {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#user-orders .order-status ul {
+	display: flex;
+	width: 90%;
+	margin: auto;
+}
+
+#user-orders .user-order {
+	margin: auto;
+
+	width: 100%;
+	min-height: 100px;
+	font-size: 1.25rem;
+	border-bottom: 1px solid rgb(210, 72, 7, 0.6);
+	cursor: pointer;
+	padding: 10px 0;
+}
+
+#user-orders .status-button {
+	padding: 5px;
+}
+
+#user-orders #status-dropdown {
+	background-color: white;
+	border-radius: 5px;
+}
+
+#user-orders .order-info {
+	float: left;
+	align-items: flex-start;
+}
+
+#user-orders .order-div {
+	display: flex;
+	margin: auto;
+	justify-content: center;
+}
+#user-orders .order-list {
+	display: block;
+}
+#user-orders .order-label {
+	display: block;
+}
+
+#user-orders .row.summary {
+	background-color: white;
+}
+
+#user-orders .row.summary .col-6 .row {
+	justify-content: center;
+}
+
+#user-orders .row.summary .col-3.status-for-delivery {
+	color: rgb(0, 167, 0);
+	float: right;
+	font-size: 1rem !important;
+	font-weight: bold;
+}
+#user-orders .row.summary .col-3.status-preparing {
+	color: rgb(212, 193, 14);
+	float: right;
+	font-size: 1rem !important;
+	font-weight: bold;
+}
+#user-orders .row.summary .col-3.status-waiting {
+	float: right;
+	color: rgb(43, 188, 199);
+	font-size: 1rem !important;
+	font-weight: bold;
+}
+
+#user-orders .row.summary .col-3.status-delivered {
+	color: rgba(255, 136, 0, 0.938);
+	float: right;
+	font-size: 1rem !important;
+	font-weight: bold;
+}
+#user-orders .row.summary .col-3.status-cancelled {
+	color: rgb(211, 0, 0);
+	float: right;
+	box-shadow: 1px 2px;
+	font-size: 0.5rem !important;
+	font-weight: bold;
+}
+
+#user-orders .row {
+	width: 100%;
+	margin: auto !important;
+}
+
+#user-orders .row.labels .col-6 {
+	max-width: 40%;
+	flex: 0 0 40%;
+}
+#user-orders .row.labels .col-3 {
+	max-width: 30%;
+	flex: 0 0 30%;
+}
+#user-orders .row.info .col-6 {
+	max-width: 40%;
+	flex: 0 0 40%;
+}
+#user-orders .row.info .col-3 {
+	max-width: 30%;
+	flex: 0 0 30%;
+}
+#user-orders .row.labels .col-3 > div {
+	float: right;
+	font-size: 1rem;
+	color: grey;
+}
+#user-orders .row.labels .col > div {
+	float: right;
+	font-size: 1rem;
+	color: grey;
+}
+#user-orders .row.labels .col-6 > div {
+	font-size: 1rem;
+	float: left;
+	color: grey;
+}
+
+#user-orders .row.info .col-3 > div {
+	float: right;
+	font-size: 1.25rem;
+}
+#user-orders .row.info .col > div {
+	float: right;
+	font-size: 1.25rem;
+}
+
+#user-orders .row.info .col-6 > div {
+	font-size: 1.25rem;
+}
+
+#user-orders .row.summary {
+	padding: 1vh !important;
+	border-radius: 20px !important;
+	border: none;
+}
+
+#cart-orders .cart {
+	padding: 1vh !important;
+}
+
+#history-title {
+	width: 40%;
+	height: 40px;
+	margin: 30px auto;
+	margin-bottom: 15px;
+	background-color: rgb(210, 72, 7, 0.6);
+	border-radius: 2px;
+	color: white;
+}
+
+#user-orders .user-order-id {
+	color: black !important;
+	float: left;
+}
+#no-orders {
+	/* align-self: center; */
+	margin: 20% 0;
+}
+
+#cart-orders {
+	margin: auto;
+}
+
+@media screen and (max-width: 900px) {
+	#user-orders .user-order {
+		font-size: 1rem !important;
+	}
+
+	#user-orders .summary {
+		padding: 1vh !important;
+	}
+
+	#user-orders .order-status ul {
+		width: 100%;
+	}
+
+	#user-orders .row.labels .col-3 > div {
+		float: none;
+		font-size: 0.75rem;
+	}
+	#user-orders .row.labels .col > div {
+		float: none;
+		font-size: 0.75rem;
+	}
+	#user-orders .row.labels .col-6 > div {
+		font-size: 0.75rem;
+	}
+	#user-orders .row.info .col-3 > div {
+		float: none;
+		font-size: 0.75rem;
+	}
+	#user-orders .row.info .col > div {
+		float: none;
+		font-size: 0.75rem;
+	}
+	#user-orders .row.info .col-6 > div {
+		font-size: 0.75rem;
+	}
+}

@@ -1,0 +1,182 @@
+#order .user-order {
+	list-style-type: none;
+}
+
+#order {
+	min-height: 400px;
+}
+
+#order .status-button {
+	background-color: rgb(210, 72, 7, 0.6);
+	border: none;
+	color: white;
+	width: 150px;
+
+	margin-top: 0 !important;
+	border-radius: 0;
+	padding: 0;
+}
+
+#order .status-button:hover {
+	background-color: rgb(210, 72, 7) !important;
+	transition: all 0.2s;
+}
+
+#order .status-button:nth-of-type(1) {
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+#order .status-button:last-of-type {
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+#order .order-status ul {
+	display: flex;
+	width: 80%;
+	margin: auto;
+}
+
+#order .user-order {
+	margin: 20px auto;
+	/* width: 100%; */
+	min-width: 80%;
+	/* width: 80%; */
+	min-height: 100px;
+	font-size: 1.25rem;
+	/* box-shadow: 0.5px 0.5px; */
+}
+
+#order .card {
+	padding-bottom: 20px;
+	border-radius: 5px !important;
+	border: none !important;
+}
+#order .user-order-id {
+	color: white;
+	padding: 10px 20px;
+	font-size: 1.5rem;
+	background-color: rgb(210, 72, 7, 0.6);
+	width: 100%;
+	border-top-right-radius: 5px !important;
+	border-top-left-radius: 5px !important;
+}
+
+#order .status-button {
+	padding: 5px;
+}
+
+#order #status-dropdown {
+	background-color: white;
+	border-radius: 5px;
+}
+
+#order .order-info {
+	float: left;
+	align-items: flex-start;
+}
+
+#order .order-div {
+	display: flex;
+	margin: auto;
+	justify-content: center;
+}
+#order .order-list {
+	display: block;
+}
+#order .order-label {
+	display: block;
+}
+
+#order .row.summary {
+	background-color: white;
+}
+
+#order .row.summary .col-6 .row {
+	justify-content: center;
+}
+
+#order .row .status-for-delivery {
+	color: rgb(0, 167, 0);
+	font-size: 1rem !important;
+	font-weight: bold;
+}
+#order .row .status-preparing {
+	color: rgb(212, 193, 14);
+	font-size: 1rem !important;
+	font-weight: bold;
+}
+#order .row .status-waiting {
+	color: rgb(43, 188, 199);
+	font-size: 1rem !important;
+	font-weight: bold;
+}
+
+#order .row .status-delivered {
+	color: rgba(255, 136, 0, 0.938);
+	font-size: 1rem !important;
+	font-weight: bold;
+}
+#order .row .status-cancelled {
+	color: rgb(211, 0, 0);
+	box-shadow: 1px 2px;
+	font-size: 0.5rem !important;
+	font-weight: bold;
+}
+
+#order .row.summary button {
+	cursor: default;
+}
+
+#order .orders-list div {
+	display: block;
+}
+
+#order .row.summary img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+#order .btn {
+	width: 100px;
+	color: white;
+	background-color: rgb(210, 72, 7, 0.6);
+	margin-right: 5px;
+}
+
+#order .col.update-status .btn:hover {
+	background-color: rgb(210, 72, 7);
+	transition: all 0.2s;
+	cursor: pointer;
+}
+
+#order .row.summary.details .col-5 {
+	align-items: flex-end;
+	justify-content: center;
+
+	margin: auto;
+}
+
+#order .row.summary.items {
+	width: fit-content;
+	margin: auto;
+}
+#order .row.summary.items .col {
+	width: fit-content;
+}
+
+@media screen and (max-width: 950px) {
+	#order .user-order {
+		font-size: 1rem !important;
+	}
+
+	#order .summary {
+		padding: 1vh;
+	}
+
+	#order .order-status ul {
+		width: 100%;
+	}
+}

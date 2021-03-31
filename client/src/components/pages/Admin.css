@@ -1,0 +1,22 @@
+#admin {
+	margin-top: 10%;
+}
+#admin .btn {
+	padding: 20px;
+	height: 50%;
+	width: 200px;
+	margin: 20px 0;
+	background-color: rgb(210, 72, 7);
+	color: white;
+}
+
+#admin .btn:hover {
+	background-color: #fff !important;
+	color: #242424;
+	transition: all 0.2s;
+}
+
+#admin a {
+	font-size: 1.5rem;
+	font-weight: bold;
+}
