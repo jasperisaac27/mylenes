@@ -74,22 +74,22 @@ module.exports.checkOut = async (req, res) => {
 	await User.findOne({ _id: req.body.id }, async (err, user) => {
 		if (user) {
 			const date = new Date();
-			const months = [
-				"Jan.",
-				"Feb.",
-				"Mar.",
-				"Apr.",
-				"May.",
-				"Jun.",
-				"Jul.",
-				"Aug.",
-				"Sep.",
-				"Oct.",
-				"Nov.",
-				"Dec.",
-			];
+			// const months = [
+			// 	"Jan.",
+			// 	"Feb.",
+			// 	"Mar.",
+			// 	"Apr.",
+			// 	"May.",
+			// 	"Jun.",
+			// 	"Jul.",
+			// 	"Aug.",
+			// 	"Sep.",
+			// 	"Oct.",
+			// 	"Nov.",
+			// 	"Dec.",
+			// ];
 
-			const currentMonth = months[date.getMonth()];
+			const currentMonth = date.getMonth() + 1;
 			let currentMinutes = date.getMinutes();
 			if (date.getMinutes() < 10) {
 				currentMinutes = `0${date.getMinutes()}`;
@@ -113,7 +113,7 @@ module.exports.checkOut = async (req, res) => {
 			// }
 			//
 			console.log(currentHours);
-			const currentTime = `${date.getFullYear()} ${currentMonth} ${date.getDate()} ${currentHours}:${currentMinutes} ${
+			const currentTime = `${date.getFullYear()}-${currentMonth}-${date.getDate()}-${currentHours}:${currentMinutes} ${
 				am.time
 			}`;
 			let lastOrderTime = currentTime;
