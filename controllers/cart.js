@@ -129,7 +129,8 @@ module.exports.updateItems = async (req, res) => {
 			totalPrice: finalPrice,
 		});
 		await cart.save();
-		res.send(cart);
+
+		res.send({ msg: "No items in cart", _id: cart._id });
 	});
 };
 

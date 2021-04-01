@@ -47,6 +47,7 @@ const Cart = (props) => {
 		await Axios.delete(`/deletecart/${removeCart._id}`)
 			.then((res) => {
 				setRemoveCart({});
+				setLoad(false);
 			})
 			.catch((e) => {
 				console.log(e);
@@ -54,7 +55,7 @@ const Cart = (props) => {
 	};
 
 	const updateItems = async (e) => {
-		const result = window.confirm("Proceed to delete?");
+		const result = window.confirm("Proceed to edit?");
 		if (result) {
 			await Axios.put("/updateitems", {
 				id: currentUser._id,
@@ -63,9 +64,13 @@ const Cart = (props) => {
 				menu: menu,
 			})
 				.then((res) => {
-					console.log(res);
 					if (res) {
 						setLoad(false);
+						console.log(res.data);
+						if (res.data.msg === "No items in cart") {
+							setRemoveCart(res.data);
+							setSelectCart(false);
+						}
 					}
 				})
 				.catch((err) => {
@@ -131,7 +136,10 @@ const Cart = (props) => {
 	};
 
 	useEffect(() => {
-		if (removeCart.status === "Waiting for approval") {
+		if (
+			removeCart.status === "Waiting for approval" ||
+			removeCart.msg === "No items in cart"
+		) {
 			deleteCart();
 		}
 		if (loadPage) {
