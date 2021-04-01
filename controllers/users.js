@@ -102,10 +102,9 @@ module.exports.checkOut = async (req, res) => {
 			}
 			if (currentHours > 12) {
 				am.time = "PM";
-			}
-			if ((am.time = "PM")) {
 				currentHours = currentHours - 12;
 			}
+
 			//
 			// PH Timezone
 			// if (currentHours > 12) {
