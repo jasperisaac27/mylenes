@@ -88,7 +88,7 @@ const Login = (props) => {
 					console.log(err);
 				});
 		} else {
-			console.log("Not validated");
+			// console.log("Not validated");
 		}
 	};
 	const verify = (e) => {
@@ -134,7 +134,7 @@ const Login = (props) => {
 				handleClick();
 				registerForm.reset();
 			}
-			console.log(res.data.msg);
+			// console.log(res.data.msg);
 		});
 	};
 
@@ -151,7 +151,7 @@ const Login = (props) => {
 					if (res.data.username === "admin") {
 						setIsAdmin(true);
 					}
-					console.log(`Welcome back! ${res.data.username}`);
+					// console.log(`Welcome back! ${res.data.username}`);
 				} else {
 					setUserNotFound(true);
 				}

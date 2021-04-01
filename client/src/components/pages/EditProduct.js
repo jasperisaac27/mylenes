@@ -6,7 +6,6 @@ import Axios from "axios";
 //----------------End of imports---------------------
 
 const EditProduct = (props) => {
-	// console.log(location);
 	const history = useHistory();
 	const {
 		currentUser,
@@ -57,7 +56,6 @@ const EditProduct = (props) => {
 		await Axios.put("/editproduct", formData)
 			.then((res) => {
 				if (res.data.msg) {
-					console.log(res.data.msg);
 					history.push("/menu");
 				} else {
 					console.log(res);
@@ -73,7 +71,6 @@ const EditProduct = (props) => {
 				data: { id: id },
 			})
 				.then((res) => {
-					console.log(res.data.msg);
 					history.push("/menu");
 				})
 				.catch((err) => {

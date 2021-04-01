@@ -56,7 +56,7 @@ const ViewItem = (props) => {
 				addOns: addOns,
 			})
 				.then((res) => {
-					console.log("Order added to cart");
+					// console.log("Order added to cart");
 					document.querySelector(".modal__close").click();
 					document.querySelector("#Menu").style.filter = "blur(0px)";
 					document.querySelector(".navbar").style.filter = "blur(0px)";
@@ -79,7 +79,7 @@ const ViewItem = (props) => {
 				addOns: addOns,
 			})
 				.then((res) => {
-					console.log("Order added to cart");
+					// console.log("Order added to cart");
 					document.querySelector(".modal__close").click();
 					document.querySelector("#Menu").style.filter = "blur(0px)";
 					document.querySelector(".navbar").style.filter = "blur(0px)";

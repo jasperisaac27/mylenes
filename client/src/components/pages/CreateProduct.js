@@ -32,7 +32,6 @@ const CreateProduct = (props) => {
 		await Axios.post("/createproduct", formData, product)
 			.then((res) => {
 				if (res.data.msg === "Product added") {
-					console.log(res.data.msg);
 					history.push("/menu");
 				} else {
 					console.log(res);

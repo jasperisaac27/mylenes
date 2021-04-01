@@ -55,7 +55,6 @@ const EditAddon = (props) => {
 		await Axios.put("/editaddon", formData)
 			.then((res) => {
 				if (res.data.msg) {
-					console.log(res.data.msg);
 					history.push("/menu");
 				} else {
 					console.log(res);
@@ -71,7 +70,6 @@ const EditAddon = (props) => {
 				data: { id: id },
 			})
 				.then((res) => {
-					console.log(res.data.msg);
 					history.push("/menu");
 				})
 				.catch((err) => {

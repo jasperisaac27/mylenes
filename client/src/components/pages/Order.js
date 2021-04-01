@@ -44,9 +44,9 @@ const Order = (props) => {
 			})
 				.then((response) => {
 					if (response.data.msg === "No user found") {
-						console.log(response.data.msg);
+						// console.log(response.data.msg);
 					} else {
-						console.log(response.data);
+						// console.log(response.data);
 
 						history.push("/admin/orders");
 					}
@@ -65,9 +65,9 @@ const Order = (props) => {
 			})
 				.then((response) => {
 					if (response.data.msg === "No user found") {
-						console.log(response.data.msg);
+						// console.log(response.data.msg);
 					} else {
-						console.log(response.data);
+						// console.log(response.data);
 						history.push("/admin/orders");
 					}
 				})
@@ -85,9 +85,9 @@ const Order = (props) => {
 			})
 				.then((response) => {
 					if (response.data.msg === "No user found") {
-						console.log(response.data);
+						// console.log(response.data);
 					} else {
-						console.log(response.data);
+						// console.log(response.data);
 
 						history.push("/admin/orders");
 					}
@@ -106,9 +106,9 @@ const Order = (props) => {
 			})
 				.then((response) => {
 					if (response.data.msg === "No user found") {
-						console.log(response.data.msg);
+						// console.log(response.data.msg);
 					} else {
-						console.log(response.data);
+						// console.log(response.data);
 
 						history.push("/admin/orders");
 					}

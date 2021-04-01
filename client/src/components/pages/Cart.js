@@ -47,8 +47,6 @@ const Cart = (props) => {
 		await Axios.delete(`/deletecart/${removeCart._id}`)
 			.then((res) => {
 				setRemoveCart({});
-
-				console.log(res.data.msg);
 			})
 			.catch((e) => {
 				console.log(e);

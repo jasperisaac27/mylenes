@@ -32,7 +32,6 @@ const CreateAddOn = (props) => {
 		await Axios.post("/createaddon", formData, addOn)
 			.then((res) => {
 				if (res.data.msg === "Product added") {
-					console.log(res.data.msg);
 					history.push("/menu");
 				} else {
 					console.log(res.data.msg);

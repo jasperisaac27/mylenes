@@ -130,24 +130,7 @@ const Admin = (props) => {
 						<option value="Cancelled">Cancelled</option>
 					</select>
 				)}
-				{/* {users &&
-					console.log(
-						users
-							.map((user) => {
-								return user;
-							})
-							.sort(function(a, b) {
-								const timeA = a.orderTime.toUpperCase();
-								const timeB = b.orderTime.toUpperCase();
-								if (timeA < timeB) {
-									return -1;
-								}
-								if (timeA > timeB) {
-									return 1;
-								}
-								return 0;
-							})
-					)} */}
+
 				{users
 					.sort(function(a, b) {
 						const timeA = a.lastOrderTime.toUpperCase();
