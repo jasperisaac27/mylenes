@@ -189,18 +189,17 @@ module.exports.confirmDelivery = async (req, res) => {
 					.filter((filtered) => {
 						return filtered.status !== "Delivered" || "Cancelled";
 					});
-				await user.updateOne({
-					orders: newOrders,
-					lastOrderTime: orderTimes[1],
-				});
+				user.orders = newOrders;
+				user.lastOrderTime = orderTimes[1].orderTime;
+				await user.save();
+				res.send({ msg: "Order has been delivered" });
 			} else {
-				await user.updateOne({
-					orders: newOrders,
-					lastOrderTime: "",
-				});
+				user.orders = newOrders;
+				user.lastOrderTime = "";
+				await user.save();
+
+				res.send({ msg: "Order has been delivered" });
 			}
-			await user.save();
-			res.send({ msg: "Order has been delivered" });
 		} else {
 			res.send({ msg: "No user found" });
 		}
@@ -277,17 +276,15 @@ module.exports.cancelOrder = async (req, res) => {
 						container.orderTime = order.orderTime;
 						return container;
 					});
-				await user.updateOne({
-					orders: newOrders,
-					lastOrderTime: orderTimes[1].orderTime,
-				});
+				user.orders = newOrders;
+				user.lastOrderTime = orderTimes[1].orderTime;
+				await user.save();
 			} else {
-				await user.updateOne({
-					orders: newOrders,
-					lastOrderTime: "",
-				});
+				user.orders = newOrders;
+				user.lastOrderTime = "";
+				await user.save();
 			}
-			await user.save();
+
 			res.send({ msg: "Order has been cancelled" });
 		} else {
 			res.send({ msg: "No user found" });

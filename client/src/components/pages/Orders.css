@@ -44,7 +44,6 @@
 
 #user-orders .user-order {
 	margin: auto;
-
 	width: 100%;
 	min-height: 100px;
 	font-size: 1.25rem;
@@ -115,7 +114,6 @@
 #user-orders .row.summary .col-3.status-cancelled {
 	color: rgb(211, 0, 0);
 	float: right;
-	box-shadow: 1px 2px;
 	font-size: 0.5rem !important;
 	font-weight: bold;
 }

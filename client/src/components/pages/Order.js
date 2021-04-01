@@ -108,8 +108,7 @@ const Order = (props) => {
 					if (response.data.msg === "No user found") {
 						// console.log(response.data.msg);
 					} else {
-						// console.log(response.data);
-
+						console.log(response.data);
 						history.push("/admin/orders");
 					}
 				})
