@@ -101,9 +101,8 @@ module.exports.checkOut = async (req, res) => {
 				currentHours = date.getHours() - 12;
 			}
 			console.log(currentHours);
-			const currentTime = `${date.getFullYear()} ${currentMonth} ${date.getDate()} ${currentHours}:${currentMinutes} ${
-				am.time
-			}`;
+			const currentTime = `${date.getFullYear()} ${currentMonth} ${date.getDate()} ${currentHours -
+				8}:${currentMinutes} ${am.time}`;
 			let lastOrderTime = currentTime;
 			if (user.lastOrderTime < currentTime && user.lastOrderTime !== "") {
 				lastOrderTime = user.lastOrderTime;
