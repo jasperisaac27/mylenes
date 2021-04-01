@@ -95,14 +95,26 @@ module.exports.checkOut = async (req, res) => {
 				currentMinutes = `0${date.getMinutes()}`;
 			}
 			const am = { time: "AM" };
+			// For heroku timezone adjustment
 			let currentHours = date.getHours();
-			if (date.getHours() > 12) {
+			if (currentHours > 1 < 15) {
+				currentHours = date.getHours() + 8;
+			}
+			if (currentHours > 12) {
 				am.time = "PM";
 				currentHours = date.getHours() - 12;
 			}
+			//
+			// PH Timezone
+			// if (currentHours > 12) {
+			// 	am.time = "PM";
+			// 	currentHours = date.getHours() - 12;
+			// }
+			//
 			console.log(currentHours);
-			const currentTime = `${date.getFullYear()} ${currentMonth} ${date.getDate()} ${currentHours -
-				8}:${currentMinutes} ${am.time}`;
+			const currentTime = `${date.getFullYear()} ${currentMonth} ${date.getDate()} ${currentHours}:${currentMinutes} ${
+				am.time
+			}`;
 			let lastOrderTime = currentTime;
 			if (user.lastOrderTime < currentTime && user.lastOrderTime !== "") {
 				lastOrderTime = user.lastOrderTime;
