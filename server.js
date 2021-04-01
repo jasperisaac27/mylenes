@@ -36,7 +36,7 @@ const cartRoutes = require("./routes/cart.js");
 
 //Middlewares
 
-app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.resolve(__dirname, "client/build")));
 
 app.use(express.static("public"));
 app.use(bodyParser.json());
@@ -68,8 +68,9 @@ app.use("/", productRoutes);
 app.use("/", userRoutes);
 app.use("/", addOnsRoutes);
 app.use("/", cartRoutes);
+
 app.get("*", function(req, res) {
-	res.sendFile(path.join(__dirname, "client/build", "index.html"));
+	res.sendFile(path.resolve(__dirname, "client/build", "index.html"));
 });
 
 app.listen(4000, () => {
