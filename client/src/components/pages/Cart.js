@@ -69,7 +69,7 @@ const Cart = (props) => {
 						console.log(res.data);
 						if (res.data.msg === "No items in cart") {
 							setRemoveCart(res.data);
-							setSelectCart(false);
+							history.push("/menu");
 						}
 					}
 				})
