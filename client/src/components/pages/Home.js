@@ -14,6 +14,7 @@ const Home = (props) => {
 		setShowNavbar(true);
 	}
 	const [load, setLoad] = useState(false);
+	const [loaded, setLoaded] = useState(false);
 	const domHome = document.querySelector("#Home");
 	const homeLoader = document.querySelector("#homeLoader");
 
@@ -21,6 +22,7 @@ const Home = (props) => {
 		Axios.post("/home")
 			.then((res) => {
 				setFavorites(res.data);
+				setLoaded(true);
 			})
 			.catch((err) => {
 				console.log(err);
@@ -29,8 +31,9 @@ const Home = (props) => {
 	}
 
 	useEffect(() => {
-		if (load && domHome && homeLoader) {
-			domHome.style.display = "block";
+		if (loaded) {
+			domHome.style.visibility = "visible";
+			domHome.style.opacity = "1";
 			homeLoader.style.display = "none";
 		}
 	});
@@ -38,7 +41,7 @@ const Home = (props) => {
 	return (
 		<>
 			<div id="homeLoader" />
-			<div id="Home" style={{ width: "100%", display: "none" }}>
+			<div id="Home" style={{ width: "100%" }}>
 				<div className="images">
 					{favorites.map((favorite) => {
 						limit = limit + 1;

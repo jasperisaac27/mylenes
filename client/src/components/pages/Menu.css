@@ -560,7 +560,8 @@
 }
 
 #Menu {
-	display: none;
+	visibility: hidden;
+	opacity: 0;
 }
 
 #menuLoader {

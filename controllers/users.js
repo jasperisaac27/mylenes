@@ -100,6 +100,7 @@ module.exports.checkOut = async (req, res) => {
 				am.time = "PM";
 				currentHours = date.getHours() - 12;
 			}
+			console.log(currentHours);
 			const currentTime = `${date.getFullYear()} ${currentMonth} ${date.getDate()} ${currentHours}:${currentMinutes} ${
 				am.time
 			}`;
@@ -107,6 +108,7 @@ module.exports.checkOut = async (req, res) => {
 			if (user.lastOrderTime < currentTime && user.lastOrderTime !== "") {
 				lastOrderTime = user.lastOrderTime;
 			}
+			console.log(currentTime);
 			await user.updateOne({
 				orders: [
 					...user.orders,

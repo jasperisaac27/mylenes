@@ -23,6 +23,7 @@ const Menu = (props) => {
 	const [addedToCart, setAddedToCart] = useState(false);
 	const history = useHistory();
 	const [load, setLoad] = useState(false);
+	const [loaded, setLoaded] = useState(false);
 
 	if (!load) {
 		Axios.all([
@@ -36,6 +37,7 @@ const Menu = (props) => {
 				setCart(res[0].data);
 				setMenu(res[1].data);
 				setAddOns(res[2].data);
+				setLoaded(true);
 			})
 			.catch((err) => console.log(err));
 		setLoad(true);
@@ -60,13 +62,11 @@ const Menu = (props) => {
 	const menuLoader = document.querySelector("#menuLoader");
 
 	useEffect(() => {
-		if (menu && domMenu && menuLoader) {
-			domMenu.style.display = "block";
+		if (loaded) {
+			domMenu.style.visibility = "visible";
+			domMenu.style.opacity = "1";
 			menuLoader.style.display = "none";
-		}
-		if (domMenu && menuLoader) {
-			domMenu.style.display = "block";
-			menuLoader.style.display = "none";
+			setLoaded(false);
 		}
 		if (viewProduct) {
 			modalToggler();
