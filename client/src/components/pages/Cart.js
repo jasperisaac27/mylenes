@@ -1,6 +1,6 @@
 // Imports
 import React, { useState, useEffect } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import Orders from "./Orders.js";
 import Axios from "axios";
 import "./Cart.css";
@@ -8,6 +8,7 @@ import "./Cart.css";
 //----------------End of imports---------------------
 
 const Cart = (props) => {
+	const history = useHistory();
 	const { isLoggedin, currentUser, cart, setCart, addOns, menu } = props;
 	const [forEdit, setForEdit] = useState([]);
 	const [edit, setEdit] = useState(false);
