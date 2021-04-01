@@ -96,13 +96,15 @@ module.exports.checkOut = async (req, res) => {
 			}
 			const am = { time: "AM" };
 			// For heroku timezone adjustment
-			let currentHours = date.getHours();
-			if (currentHours > 1 < 15) {
-				currentHours = date.getHours() + 8;
+			let currentHours = date.getHours() + 8;
+			if (currentHours > 23) {
+				currentHours = currentHours - 24;
 			}
 			if (currentHours > 12) {
 				am.time = "PM";
-				currentHours = date.getHours() - 12;
+			}
+			if ((am.time = "PM")) {
+				currentHours = currentHours - 12;
 			}
 			//
 			// PH Timezone
