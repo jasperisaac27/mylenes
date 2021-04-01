@@ -36,7 +36,7 @@ const cartRoutes = require("./routes/cart.js");
 
 //Middlewares
 
-// app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "client/build")));
 
 app.use(express.static("public"));
 app.use(bodyParser.json());
@@ -69,9 +69,9 @@ app.use("/", userRoutes);
 app.use("/", addOnsRoutes);
 app.use("/", cartRoutes);
 
-// app.get("*", function(req, res) {
-// 	res.sendFile(path.join(__dirname, "client/build", "index.html"));
-// });
+app.get("*", function(req, res) {
+	res.sendFile(path.join(__dirname, "client/build", "index.html"));
+});
 
 app.listen(process.env.PORT || 4000, "0.0.0.0", () => {
 	console.log("Server started");
