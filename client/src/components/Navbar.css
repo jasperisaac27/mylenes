@@ -285,6 +285,7 @@ height: 100%; */
 		padding: 20px;
 		font-size: 1.5rem;
 		background-color: rgb(210, 72, 7);
+		color: white;
 	}
 	.nav-links:hover {
 		background-color: #fff;

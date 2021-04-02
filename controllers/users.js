@@ -21,13 +21,12 @@ module.exports.login = (req, res, next) => {
 
 module.exports.forverification = async (req, res) => {
 	await User.findOne({ username: req.body.username }, async (err, doc) => {
-		console.log(doc);
-
 		if (err) throw err;
 		if (doc) {
 			res.send({ msg: "User already exists" });
 		} else if (!doc) {
 			if (req.body.phoneNumber.startsWith("+63")) {
+				console.log("hi");
 				await client.verify
 					.services(serviceId)
 					.verifications.create({ to: req.body.phoneNumber, channel: "sms" })

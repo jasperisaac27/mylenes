@@ -63,7 +63,6 @@ const Login = (props) => {
 		e.preventDefault();
 		if (isValidated) {
 			let formattedPhoneNumber = regPhoneNumber;
-
 			if (regPhoneNumber.startsWith("09")) {
 				formattedPhoneNumber = "+63".concat(
 					regPhoneNumber.substring(1, regPhoneNumber.length)
