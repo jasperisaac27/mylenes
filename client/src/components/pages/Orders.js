@@ -401,9 +401,9 @@ const Orders = (props) => {
 													}}
 													className="user-order"
 												>
-													<div className="user-order-id">
+													{/* <div className="user-order-id">
 														Tracking No. : {order._id}
-													</div>
+													</div> */}
 													<div className="row summary">
 														<div className="row labels">
 															<div className="col-6">

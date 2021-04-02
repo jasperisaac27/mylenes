@@ -99,7 +99,7 @@ const Menu = (props) => {
 		<>
 			<div id="menuLoader" />
 			<div id="Menu">
-				<h1 className="Title">Menu</h1> <h2 className="menuClass">Favorites</h2>
+				<h2 className="menuClass">Favorites</h2>
 				<Row id="Favorites">
 					{menu.map((item) => {
 						if (item.isFavorite === true) {
