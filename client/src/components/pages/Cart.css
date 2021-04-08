@@ -230,7 +230,7 @@
 	display: flex;
 }
 #cart .row .qty .border {
-	width: 40px;
+	width: fit-content !important;
 	border: none !important;
 }
 
