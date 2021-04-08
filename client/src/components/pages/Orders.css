@@ -188,9 +188,13 @@
 	color: white;
 }
 
+#user-orders .row.info .col-6 {
+	text-align: start;
+}
+
 #user-orders .user-order-id {
 	color: black !important;
-	float: left;
+	/* float: left; */
 }
 #no-orders {
 	/* align-self: center; */
