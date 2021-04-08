@@ -240,4 +240,8 @@
 	#user-orders .row.info .col-6 > div {
 		font-size: 0.75rem;
 	}
+
+	#history-title {
+		width: 80%;
+	}
 }
