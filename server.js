@@ -12,12 +12,13 @@ const fs = require("fs");
 const app = express();
 const path = require("path");
 const dotenv = require("dotenv").config();
-
+const mongoUsername = process.env.mongoUsername;
+const mongoPassword = process.env.mongoPassword;
 //---------------------End--------------------------
 
 //Mongo and Schemas
 mongoose.connect(
-	"mongodb+srv://froschk12:Contristati2@cluster0.ia0tn.mongodb.net/project1?retryWrites=true&w=majority",
+	`mongodb+srv://${mongoUsername}:${mongoPassword}@cluster0.ia0tn.mongodb.net/project1?retryWrites=true&w=majority`,
 	{
 		useNewUrlParser: true,
 		useUnifiedTopology: true,
