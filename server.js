@@ -12,8 +12,8 @@ const fs = require("fs");
 const app = express();
 const path = require("path");
 const dotenv = require("dotenv").config();
-const mongoUsername = process.env.mongoUsername;
-const mongoPassword = process.env.mongoPassword;
+const mongoUsername = process.env.MONGO_USERNAME;
+const mongoPassword = process.env.MONGO_PASSWORD;
 //---------------------End--------------------------
 
 //Mongo and Schemas
